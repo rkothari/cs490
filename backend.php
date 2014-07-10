@@ -12,15 +12,15 @@ $db_name="ako6"; // Database name
 $table_name="490project"; // Table name 
 
 // Define $myusername and $mypassword 
-$myusername=$_POST['myusername']; 
-$mypassword=$_POST['mypassword']; 
+$myusername=$_POST['user']; 
+$mypassword=$_POST['pass']; 
 
 // To protect MySQL injection (more detail about MySQL injection)
-$myusername = stripslashes($myusername);
-$mypassword = stripslashes($mypassword);
-$myusername = mysql_real_escape_string($myusername);
-$mypassword = mysql_real_escape_string($mypassword);
-$sql="SELECT * FROM $table_name WHERE username='$myusername' and password='$mypassword'";
+$user = stripslashes($user);
+$pass = stripslashes($pass);
+$user = mysql_real_escape_string($user);
+$pass = mysql_real_escape_string($pass);
+$sql="SELECT * FROM $table_name WHERE username='$user' and password='$pass'";
 $result=mysql_query($sql);
 
 // Mysql_num_row is counting table row
@@ -30,8 +30,8 @@ $count=mysql_num_rows($result);
 if($count==1){
 
 // Register $myusername, $mypassword and redirect to file "login_success.php"
-session_register("myusername");
-session_register("mypassword"); 
+session_register("user");
+session_register("pass"); 
 header("location:login.php");
 }
 else {
