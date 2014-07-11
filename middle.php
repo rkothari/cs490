@@ -1,5 +1,4 @@
 <?php 
-
 $user = $_POST['user'];
 $pass = $_POST['njitpassword'];
 $dbpass = $_POST['password'];
