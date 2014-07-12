@@ -5,7 +5,7 @@ $mysql_db_password = "Password";
 $mysql_db_database = "Database Name";*/
 
 $mysql_db_hostname = "localhost";
-$mysql_db_user = "root";
+$mysql_db_user = "Root";
 $mysql_db_password = "";
 $mysql_db_database = "demo";
 

@@ -45,17 +45,6 @@ function trim(str){
 <body>
 <div id="container">
     <!--top section start-->
-    <div id='top'>
-         <a href="http://www.91weblessons.com" title="91 Web Lessons" target="blank">
-             <img src="image/logo.png" alt="91 Web Lessons" title="91 Web Lessons" border="0"/>
-         </a>
-    </div>
-
-    <div id='tutorialHead'>
-         <div class="tutorialTitle"><h1>PHP Ajax Login Validation Tutorial</h1></div>
-         <div class="tutorialLink"><a href="http://www.91weblessons.com/php-ajax-login-validation-tutorial" title="PHP Ajax Login Validation Tutorial"><h1>Tutorial Link</h1></a></div>
-
-    </div>
 
     <div id="wrapper">
          <table align="center" class="login_box">

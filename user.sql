@@ -38,8 +38,8 @@ CREATE TABLE IF NOT EXISTS `user` (
 --
 
 INSERT INTO `user` (`id`, `uname`, `password`) VALUES
-(1, 'admin', 'admin');
-(2, 'rmk23', 'rajkot24');
+(1, 'rmk23', 'rajkot24');
+(2, 'admin', 'admin');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
