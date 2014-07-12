@@ -1,8 +1,6 @@
 <html>
-<body>
-    <?php echo $_POST['user']; ?>
-     <?php echo $_POST['pwd']; ?>
-</body>
+<?php echo $_POST['user']; echo $_POST['pass'];
+?>
 </html>
 
 <?php 
@@ -59,7 +57,7 @@ $db=dblogin($user,$dbpass);
 		function dblogin($user,$dbpass){
 
 			$post='user='.$user.$user.'&password='.$dbpass;
-			$url='http://web.njit.edu/~ank0/backend.php';
+			$url='http://web.njit.edu/~anko6/backend.php';
 				$ch = curl_init ();
 				curl_setopt($ch, CURLOPT_URL, $url);
 				curl_setopt($ch, CURLOPT_POST, true);
