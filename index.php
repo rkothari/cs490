@@ -3,7 +3,7 @@
   $pass =$_POST['pass'];
   
   $crl=curl_init();
-  curl_setopt($crl, CURLOPT_URL,"http://web.njit.edu/~dp268/middle.php");
+  curl_setopt($crl, CURLOPT_URL,"middle.php");
   curl_setopt($crl, CURLOPT_POST, true);
   curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
   curl_setopt($crl, CURLOPT_POSTFIELDS, "username=$Username&password=$Password");
