@@ -4,6 +4,10 @@
 mysql_connect("sql.njit.edu","ako6","admin");
 mysql_select_db("ako6");
 
+echo $_POST['user']; 
+echo $_POST['pass'];
+die; 
+
 ob_start();
 $host="sql.njit.edu"; // Host name 
 $username=""; // Mysql username 
