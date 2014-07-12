@@ -4,10 +4,10 @@ session_start();
 $username = $_POST['username'];
 $password = md5($_POST['password']);
 
-$mysql_db_hostname = "localhost";
-$mysql_db_user = "root";
-$mysql_db_password = "";
-$mysql_db_database = "test";
+$mysql_db_hostname = "sql.njit.edu";
+$mysql_db_user = "ako6";
+$mysql_db_password = "admin";
+$mysql_db_database = "ako6";
 
 $con = mysql_connect($mysql_db_hostname, $mysql_db_user, $mysql_db_password) or die("Could not connect database");
 mysql_select_db($mysql_db_database, $con) or die("Could not select database");
