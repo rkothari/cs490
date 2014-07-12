@@ -1,81 +1,44 @@
+<?php
+  session_start();
+  if(!isset($_SESSION['LOGIN_STATUS'])){
+      header('location:login.php');
+  }
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<script type="text/javascript" src="jquery.js"></script>
-<link rel="stylesheet" href="styles.css" type="text/css" />
-<title>Login Form</title>
-<script type="text/javascript">
-$(document).ready(function(){
-	
-   $("#login").click(function(){
-		username=$("#user_name").val();
-        password=$("#password").val();
-
-         $.ajax({
-            type: "POST",
-           url: "login.php",
-            data: "username="+username+"&password="+password,
-
-
-            success: function(html){
-			
-			  if(html=='true')
-              {
-                $("#login_form").fadeOut("normal");
-				$("#shadow").fadeOut();
-				$("#profile").html("<a href='logout.php' class='red' id='logout'>Logout</a>");
-				// You can redirect to other page here....
-              }
-              else
-              {
-                    $("#add_err").html("Wrong username or password");
-              }
-            },
-            beforeSend:function()
-			{
-                 $("#add_err").html("Loading...")
-            }
-        });
-         return false;
-    });
-});
-</script>
+<title>PHP Ajax Login Validation Tutorial | 91 Web Lessons</title>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 <body>
-<?php session_start(); ?>
-	<div id="profile">
-     	<?php
-   	if(isset($_SESSION['user_name'])){
-			?>
-	<a href='logout.php'>Logout</a>
-		<?php } ?>
-	</div>
-</body>
-<?php 
-if(empty($_SESSION['user_name'])){?>
-<div class="container" id="login_form">
-	<section id="content">
-		<form action="login.php">
-			<h1>Login Form</h1>
-			<div>
-				<input type="text" placeholder="Username" required="" id="user_name"  name="user_name"/>
-			</div>
-			<div>
-				<input type="password" placeholder="Password" required="" id="password"  name="password"/>
-			</div>
-		        <div class="err" id="add_err"></div>
-			<div>
-					<input type="submit" value="Log in" id="login"  />
-				<a href="#">Lost your password?</a>
-				<a href="#">Register</a>
-			</div>
-		</form><!-- form -->
-		<div class="button">
-			
-		</div><!-- button -->
-	</section><!-- content -->
+<div id="container">
+    <!--top section start-->
+    <div id='top'>
+         <a href="http://www.91weblessons.com" title="91 Web Lessons" target="blank">
+             <img src="image/logo.png" alt="91 Web Lessons" title="91 Web Lessons" border="0"/>
+         </a>
+    </div>
+
+    <div id='tutorialHead'>
+         <div class="tutorialTitle"><h1>PHP Ajax Login Validation Tutorial</h1></div>
+         <div class="tutorialLink"><a href="http://www.91weblessons.com/php-ajax-login-validation-tutorial" title="PHP Ajax Login Validation Tutorial"><h1>Tutorial Link</h1></a></div>
+
+         <div class="logout"><a href="logout.php" title="logout"><h1>Logout</h1></a></div>
+
+    </div>
+
+    <div id="wrapper">
+         <div class="user_intro"><h1>Welcome <?php echo $_SESSION['UNAME'];?></h1></div>
+    </div>
+
+    <!--fotter section start-->
+    <div id="fotter">
+         <p>Copyright &copy; 2012 
+              <a href="http://www.91weblessons.com" title="91 Web Lessons" target="blank">91 Web Lessons</a>. 
+              All rights reserved.
+         </p>
+    </div>
 </div>
-<?php }?>
-<!-- container -->
+</body>
 </html>
