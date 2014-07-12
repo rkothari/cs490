@@ -1,7 +1,8 @@
 <?php 
+
 $user = $_POST['user'];
-$pass = $_POST['njitpassword'];
-$dbpass = $_POST['password'];
+$pass = $_POST['pass'];
+$dbpass = $_POST['pass'];
 //$user = "dp268";
 //$pass = "njitpass1";
 //$dbpass = "cs490";

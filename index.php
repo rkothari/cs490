@@ -1,3 +1,8 @@
+<!--<?php
+      <?php echo $_POST['username']; ?>
+      <?php echo $_POST['password']; ?>
+?> -->
+
 <!DOCTYPE html>
   <header>
     <link rel="stylesheet" type="text/css" href="css/custom.css">
@@ -14,7 +19,7 @@
     <div class="row"> 
       <div class="small-4 small-centered columns">
         <div>
-        <form action="middle.php" method="post">
+        <form action="" method="post">
             <h5 class="white">User Name:</h5>
             <input type="text" name="user">
             <h5 class="white">Password:</h5>
