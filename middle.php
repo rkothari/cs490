@@ -1,3 +1,10 @@
+<html>
+<body>
+    <?php echo $_POST['user']; ?>
+     <?php echo $_POST['pwd']; ?>
+</body>
+</html>
+
 <?php 
 
 $user = $_POST['user'];
