@@ -4,12 +4,14 @@
       header('location:index.php');
   }
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>PHP Ajax Login Validation Tutorial | 91 Web Lessons</title>
-<link rel="stylesheet" type="text/css" href="css/style.css" />
+<title>CS490 Project</title>
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <link rel="stylesheet" type="text/css" href="css/foundation.css">
+
 <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
 <script type="text/javascript">
 function validLogin(){
@@ -42,22 +44,29 @@ function trim(str){
 }
 </script>
 </head>
-<body>
-<div id="container">
-    <!--top section start-->
-    <div id='top'>
-         <a href="http://www.91weblessons.com" title="91 Web Lessons" target="blank">
-             <img src="image/logo.png" alt="91 Web Lessons" title="91 Web Lessons" border="0"/>
-         </a>
+
+<body class="blackboard"> 
+    <div id="head">
+      CS 101 ExamLocation
     </div>
-
-    <div id='tutorialHead'>
-         <div class="tutorialTitle"><h1>PHP Ajax Login Validation Tutorial</h1></div>
-         <div class="tutorialLink"><a href="http://www.91weblessons.com/php-ajax-login-validation-tutorial" title="PHP Ajax Login Validation Tutorial"><h1>Tutorial Link</h1></a></div>
-
+    <br/>
+    <br/>
+    <br/>
+    <div class="row"> 
+      <div class="small-4 small-centered columns">
+        <div>
+        <form id="login" action="" method="POST">
+            <h5 class="white">User Name:</h5>
+            <input type="text" name="uname">
+            <h5 class="white">Password:</h5>
+            <input type="password" name="password">
+            <button class="right" id="loginstyle" type="submit" name="submit" value="Submit" onclick="validLogin">Login</button>
+        </form>
+        </div>
+      </div>
     </div>
-
-    <div id="wrapper">
+  </body>
+<!--     <div id="wrapper">
          <table align="center" class="login_box">
               <tr><td colspan="2" id="errorMessage"></td></tr>
               <tr>
@@ -74,15 +83,7 @@ function trim(str){
               </tr>
               <tr><td colspan="2" id="flash"></td></tr>
          </table>
-    </div>
+    </div> -->
 
-    <!--fotter section start-->
-    <div id="fotter">
-         <p>Copyright &copy; 2012 
-              <a href="http://www.91weblessons.com" title="91 Web Lessons" target="blank">91 Web Lessons</a>. 
-              All rights reserved.
-         </p>
-    </div>
-</div>
-</body>
+
 </html>
