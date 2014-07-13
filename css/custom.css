@@ -5,6 +5,8 @@
 	color: white;
 }
 
+#errorMessage{color:red !important ;}
+
 .titlecenter{
 	text-align: center;
 }
@@ -27,4 +29,5 @@
 	border: white solid;
 	color: white;
 	font-family: cursive;
+
 }

@@ -9,7 +9,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>LEARNING4U</title>
-<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="css/custom.css" />
+<link rel="stylesheet" type="text/css" href="css/foundation.css" />
 <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
 <script type="text/javascript">
 
@@ -45,16 +46,46 @@ function trim(str){
 </script>
 
 </head>
-<body>
+<body class="blackboard">
+   <div id="head">
+      CS 101 ExamLocation
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <div class="row"> 
+      <div class="small-4 small-centered columns">
+  <div>
+    <p id="errorMessage"></p>
+      <form>
+        <h5 class="white">User Name:</h5>
+        <input type="text" name="uname" id="uname">
+        <h5 class="white">Password:</h5>
+        <input type="password" name="password" id="password">
+        <div class="right">
+        <input type="button" class="button"id="loginstyle"  name="submit" value="Submit" onclick="validLogin()">
+        </div>
+      </form>
+    <p id="flash"></p>
+  </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<!-- <body class="blackboard">
+
    <div>
        <p id="errorMessage"></p>
-                <td>UserName</td>
-                <td><input type="text" name="uname" id="uname"></td>
-                <td>Password</td>
+          <form>
+                <h5 class="white">User Name: </h5>
+                <input type="text" name="uname" id="uname"></td>
+                <h5 class="white">Password: </h5>
                 <input type="password" name="password" id="password">
                 <input type="button" name="submit" value="Submit" class="button" onclick="validLogin()">
-             <p id="flash"></p>
+      </form>
+    <p id="flash"></p>
    </div>
 </div>
-</body>
+</body> -->
 </html>

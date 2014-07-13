@@ -30,7 +30,7 @@ if($countError > 0){
          $_SESSION['UNAME']=$uname;
          echo 'correct';
     }else{
-         echo ucwords('please enter correct user details');
+         echo ucwords('Could not connect to local DB please enter correct credientals');
     }
 }
 ?>
