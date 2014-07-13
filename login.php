@@ -16,12 +16,10 @@
 
 
 function validLogin(){
-       var uname=$('#uname').val();
-      // var uname=$('#uname');
+       var username=$('#username').val();
        var password=$('#password').val();
-      // var password=$('#password');
 
-      var dataString = 'uname='+ uname + '&password='+ password;
+      var dataString = 'username='+ username + '&password='+ password;
       $.ajax({
       type: "POST",
       url: "middle.php",
@@ -60,7 +58,7 @@ function trim(str){
     <p id="successMessage"></p>    
       <form>
         <h5 class="white">User Name:</h5>
-        <input type="text" name="uname" id="uname">
+        <input type="text" name="username" id="username">
         <h5 class="white">Password:</h5>
         <input type="password" name="password" id="password">
         <div class="right">
@@ -71,7 +69,5 @@ function trim(str){
         </div>
     </div>
 </body>
-
 </html>
-
 </html>

@@ -1,38 +1,37 @@
 <?php
 session_start();
 include_once('backend.php');
-$message=array();
-if(isset($_POST['uname']) && !empty($_POST['uname'])){
-    $uname=mysql_real_escape_string($_POST['uname']);
+$empty_field=array();
+if(isset($_POST['username']) && !empty($_POST['username'])){
+    $username=mysql_real_escape_string($_POST['username']);
 }else{
-    $message[]='Please enter username';
+    $empty_field[]='Incorrect Username';
 }
 
 if(isset($_POST['password']) && !empty($_POST['password'])){
     $password=mysql_real_escape_string($_POST['password']);
 }else{
-    $message[]='Please enter password';
+    $empty_field[]='Incorrect Password';
 }
 
-$countError=count($message);
+$char_error=count($empty_field);
 
-if($countError > 0){
-     for($i=0;$i<$countError;$i++){
-              echo ucwords($message[$i]).'<br/><br/>';
+if($char_error > 0){
+     for($i=0;$i<$char_error;$i++){
+              echo ucwords($empty_field[$i]).'<br/><br/>';
      }
 }else{
-    $query="select * from user where uname='$uname' and password='$password'";
-
+    $query="select * from user where username='$username' and password='$password'";
     $res=mysql_query($query);
-    $checkUser=mysql_num_rows($res);
-    if($checkUser > 0){
+    $user_confirmation=mysql_num_rows($res);
+    if($user_confirmation > 0){
          $_SESSION['LOGIN_STATUS']=true;
-         $_SESSION['UNAME']=$uname;
-         echo ucwords('Hello you have connected to the local database');
+         $_SESSION['username']=$username;
+         echo ucwords('Connection To Local Database: Success');
          session_destroy(); // For now will need to make logout function in beta.
          die;
     }else{
-         echo ucwords('Could not connect to local DB please enter correct credientals');
+         echo ucwords('Connection To Local Database: Failed');
     }
 }
 ?>
