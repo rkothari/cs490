@@ -6,6 +6,7 @@
 }
 
 #errorMessage{color:red !important ;}
+#successMessage{color:lightgreen !important ;}
 
 .titlecenter{
 	text-align: center;

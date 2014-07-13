@@ -28,7 +28,9 @@ if($countError > 0){
     if($checkUser > 0){
          $_SESSION['LOGIN_STATUS']=true;
          $_SESSION['UNAME']=$uname;
-         echo 'correct';
+         echo ucwords('Hello you have connected to the local database');
+         session_destroy(); // For now will need to make logout function in beta.
+         die;
     }else{
          echo ucwords('Could not connect to local DB please enter correct credientals');
     }
