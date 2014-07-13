@@ -1,6 +1,9 @@
 <?php
 session_start();
 include_once('backend.php');
+ini_set('display_errors',1);
+error_reporting(E_ALL);
+
 $empty_field=array();
 if(isset($_POST['username']) && !empty($_POST['username'])){
     $username=mysql_real_escape_string($_POST['username']);
@@ -34,6 +37,7 @@ if($char_error > 0){
          echo ucwords('Connection To Local Database: Failed');
     }
 }
+
 ?>
 
 
