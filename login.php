@@ -4,16 +4,16 @@
       header('location:index.php');
   }
 ?>
-<!DOCTYPE html>
-
+<!DOCTYPE>
+<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>CS490 Project</title>
-    <link rel="stylesheet" type="text/css" href="css/custom.css">
-    <link rel="stylesheet" type="text/css" href="css/foundation.css">
-
+<title>LEARNING4U</title>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
 <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
 <script type="text/javascript">
+
+
 function validLogin(){
       var uname=$('#uname').val();
       var password=$('#password').val();
@@ -43,30 +43,10 @@ function trim(str){
      return str;
 }
 </script>
-</head>
 
-<body class="blackboard"> 
-    <div id="head">
-      CS 101 ExamLocation
-    </div>
-    <br/>
-    <br/>
-    <br/>
-    <div class="row"> 
-      <div class="small-4 small-centered columns">
-        <div>
-        <form id="login" action="" method="POST">
-            <h5 class="white">User Name:</h5>
-            <input type="text" name="uname">
-            <h5 class="white">Password:</h5>
-            <input type="password" name="password">
-            <button class="right" id="loginstyle" type="submit" name="submit" value="Submit" onclick="validLogin">Login</button>
-        </form>
-        </div>
-      </div>
-    </div>
-  </body>
-<!--     <div id="wrapper">
+</head>
+<body>
+    <div id="wrapper">
          <table align="center" class="login_box">
               <tr><td colspan="2" id="errorMessage"></td></tr>
               <tr>
@@ -83,7 +63,7 @@ function trim(str){
               </tr>
               <tr><td colspan="2" id="flash"></td></tr>
          </table>
-    </div> -->
-
-
+    </div>
+</div>
+</body>
 </html>
