@@ -23,7 +23,7 @@ function validLogin(){
       $("#flash").fadeIn(400).html('<img src="image/loading.gif" />');
       $.ajax({
       type: "POST",
-      url: "processed.php",
+      url: "middle.php",
       data: dataString,
       cache: false,
       success: function(result){

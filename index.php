@@ -3,6 +3,13 @@
   if(!isset($_SESSION['LOGIN_STATUS'])){
       header('location:login.php');
   }
+function logout(){
+  
+  session_start();
+  session_destroy();
+  header('location:login.php');
+  
+  }
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -11,15 +18,6 @@
 <title>PHP Ajax Login Validation Tutorial | 91 Web Lessons</title>
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
-<!-- <body>
-<div id="container">
-    <!--top section start-->
-    <div id='top'>
-         <a href="http://www.91weblessons.com" title="91 Web Lessons" target="blank">
-             <img src="image/logo.png" alt="91 Web Lessons" title="91 Web Lessons" border="0"/>
-         </a>
-    </div> -->
-
     <div id='tutorialHead'>
          <div class="tutorialTitle"><h1>PHP Ajax Login Validation Tutorial</h1></div>
          <div class="tutorialLink"><a href="http://www.91weblessons.com/php-ajax-login-validation-tutorial" title="PHP Ajax Login Validation Tutorial"><h1>Tutorial Link</h1></a></div>
