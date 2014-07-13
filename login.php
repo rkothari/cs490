@@ -46,24 +46,15 @@ function trim(str){
 
 </head>
 <body>
-    <div id="wrapper">
-         <table align="center" class="login_box">
-              <tr><td colspan="2" id="errorMessage"></td></tr>
-              <tr>
-                 <td>UserName</td>
-                 <td><input type="text" name="uname" id="uname"></td>
-              </tr>
-              <tr>
-                 <td>Password</td>
-                 <td><input type="password" name="password" id="password"></td>
-              </tr>
-              <tr id="button_box">
-                 <td>&nbsp</td>
-                 <td><input type="button" name="submit" value="Submit" class="button" onclick="validLogin()"></td>
-              </tr>
-              <tr><td colspan="2" id="flash"></td></tr>
-         </table>
-    </div>
+   <div>
+       <p id="errorMessage"></p>
+                <td>UserName</td>
+                <td><input type="text" name="uname" id="uname"></td>
+                <td>Password</td>
+                <input type="password" name="password" id="password">
+                <input type="button" name="submit" value="Submit" class="button" onclick="validLogin()">
+             <p id="flash"></p>
+   </div>
 </div>
 </body>
 </html>
