@@ -1,9 +1,9 @@
 <?php
 
-$hostname = "sql2.njit.edu";
-$user = "dp268";
-$password = "admin";
-$database = "dp268";
+$hostname = "localhost";
+$user = "root";
+$password = "root";
+$database = "test";
 
 $connection = mysql_connect($hostname, $user, $password) or die ("Database Could Not Be Accessed");
 

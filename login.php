@@ -3,6 +3,33 @@
   if(isset($_SESSION['LOGIN_STATUS']) && !empty($_SESSION['LOGIN_STATUS'])){
       header('location:login.php');
   }
+  // * Tried implementing curl, however it is not hitting or passing
+  // * anything to middle/dB. Need advice.
+
+  // if (isset($_POST['user'])){ 
+  // $user = $_POST['user'];
+  // $pass = $_POST['pass'];
+  
+  // $post ='&user='.$user.'&pass='.$pass;
+  
+  // // $post = array(
+  // //  'user' => $user,
+  // //  'pass' => $pass
+  // //  );
+  
+  // echo $post;
+
+  // $url = 'http://localhost:8888/middle.php';
+  // // $url = 'http:osl81.njit.edu/~dp268/middle.php'
+  // $ch = curl_init();
+  // curl_setopt($ch, CURLOPT_URL, $url);
+  // curl_setopt($ch, CURLOPT_POST, true);
+  // curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+  // curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+  // $response = curl_exec($ch);
+  // curl_close($ch);
+  // echo $response;
+
 ?>
 
 <!DOCTYPE>
@@ -23,7 +50,7 @@ function validLogin(){
       var dataString = 'username='+ username + '&password='+ password;
       $.ajax({
       type: "POST",
-      url: "middle.php",
+      url: "curl.php",
       data: dataString,
       cache: false,
       success: function(result){
