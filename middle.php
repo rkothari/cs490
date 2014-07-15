@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 include_once('local_db.php');
 ini_set('display_errors',1);
 error_reporting(E_ALL);
@@ -30,11 +30,12 @@ if($char_error > 0){
     if($user_confirmation > 0){
          $_SESSION['LOGIN_STATUS']=true;
          $_SESSION['username']=$username;
-         echo ucwords('Connection To Local Database: Success');
-         session_destroy(); // For now will need to make logout function in beta.
-         die;
+         $success_message = ('You are logged in! Hello: ' . $username);
+         session_start();
+         echo $success_message;
     }else{
-         echo ucwords('Connection To Local Database: Failed');
+        $error_message =('Incorrect Credientals. Please try again.');
+        echo $error_message;
     }
 }
 
